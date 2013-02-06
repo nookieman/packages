@@ -8,6 +8,7 @@ function index()
     entry({"wizard", "hostname"}, form("freifunk-wizard/hostname"), "Hostname", 30).dependent=false
     entry({"wizard", "meshvpn"}, form("freifunk-wizard/meshvpn"), "Mesh-VPN", 40).dependent=false
     entry({"wizard", "meshvpn", "pubkey"}, template("freifunk-wizard/meshvpn-key"), "Mesh-VPN Key", 1).dependent=false
+    entry({"wizard", "autoupdater"}, cbi("freifunk-wizard/autoupdater"), "Automatische Updates", 30).dependent=false
     entry({"wizard", "completed"}, template("freifunk-wizard/completed"), "Fertig", 50).dependent=false
     entry({"wizard", "completed", "reboot"}, call("reboot"), "reboot", 1).dependent=false
   end
